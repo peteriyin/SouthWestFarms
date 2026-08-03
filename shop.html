@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shop — Southwest Farms</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script defer src="app.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand"><img src="assets/logo.png" alt="Southwest Farms" class="logo"><span class="brand-name">Southwest Farms</span></a>
+    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Menu">☰</button>
+    <nav id="main-nav" class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="shop.html" class="active">Shop</a>
+      <a href="wholesale.html">Wholesale</a>
+      <a href="subscription.html">Subscriptions</a>
+      <a href="trace.html">Traceability</a>
+      <a href="contact.html">Contact</a>
+      <button id="cart-btn" class="cart-pill">Cart (<span id="cart-count">0</span>)</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="shop-head">
+    <span class="eyebrow">6 items available today</span>
+    <h1>Fresh vegetables</h1>
+  </div>
+
+  <div class="filters">
+    <label class="filter-chip"><input type="checkbox" id="filter-gh"> Greenhouse only</label>
+    <label class="filter-chip"><input type="checkbox" id="filter-of"> Open field only</label>
+    <input id="search" type="search" placeholder="Search produce…">
+  </div>
+
+  <div id="products" class="product-grid"></div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand"><img src="assets/logo.png" alt="Southwest Farms"><strong>Southwest Farms Limited</strong></div>
+      <p>Abeokuta, Nigeria</p>
+    </div>
+  </div>
+</footer>
+
+<div id="cart-modal" class="modal" aria-hidden="true">
+  <div class="modal-content">
+    <button id="close-cart" class="close" aria-label="Close cart">×</button>
+    <h3>Your Cart</h3>
+    <div id="cart-items"></div>
+    <div class="cart-footer"><strong>Total: ₦<span id="cart-total">0</span></strong><button id="checkout-btn" class="btn btn--primary">Checkout</button></div>
+  </div>
+</div>
+</body>
+</html>

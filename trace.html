@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Traceability — Southwest Farms</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script defer src="app.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand"><img src="assets/logo.png" alt="Southwest Farms" class="logo"><span class="brand-name">Southwest Farms</span></a>
+    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Menu">☰</button>
+    <nav id="main-nav" class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="wholesale.html">Wholesale</a>
+      <a href="subscription.html">Subscriptions</a>
+      <a href="trace.html" class="active">Traceability</a>
+      <a href="contact.html">Contact</a>
+      <button id="cart-btn" class="cart-pill">Cart (<span id="cart-count">0</span>)</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container" style="padding:48px 0 96px">
+  <span class="eyebrow">Every pack, accounted for</span>
+  <h1>Batch traceability</h1>
+  <p class="lede" style="max-width:56ch">Enter the lot number printed on your pack, or follow the QR code, to see exactly when and where it was harvested.</p>
+
+  <div class="trace-steps">
+    <div class="trace-step"><span class="num">01</span>Find the lot code on your pack or scan its QR code</div>
+    <div class="trace-step"><span class="num">02</span>Enter it below to pull up the batch record</div>
+    <div class="trace-step"><span class="num">03</span>See the exact harvest date and source</div>
+  </div>
+
+  <div class="trace-lookup">
+    <input id="lot-input" placeholder="e.g. LOT20251101">
+    <button id="lookup" class="btn btn--primary">Look up</button>
+  </div>
+  <div id="trace-result"></div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand"><img src="assets/logo.png" alt="Southwest Farms"><strong>Southwest Farms Limited</strong></div>
+      <p>Abeokuta, Nigeria</p>
+    </div>
+  </div>
+</footer>
+
+<div id="cart-modal" class="modal" aria-hidden="true">
+  <div class="modal-content">
+    <button id="close-cart" class="close" aria-label="Close cart">×</button>
+    <h3>Your Cart</h3>
+    <div id="cart-items"></div>
+    <div class="cart-footer"><strong>Total: ₦<span id="cart-total">0</span></strong><button id="checkout-btn" class="btn btn--primary">Checkout</button></div>
+  </div>
+</div>
+</body>
+</html>

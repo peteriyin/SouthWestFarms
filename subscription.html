@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Subscriptions — Southwest Farms</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script defer src="app.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand"><img src="assets/logo.png" alt="Southwest Farms" class="logo"><span class="brand-name">Southwest Farms</span></a>
+    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Menu">☰</button>
+    <nav id="main-nav" class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="wholesale.html">Wholesale</a>
+      <a href="subscription.html" class="active">Subscriptions</a>
+      <a href="trace.html">Traceability</a>
+      <a href="contact.html">Contact</a>
+      <button id="cart-btn" class="cart-pill">Cart (<span id="cart-count">0</span>)</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container" style="padding:48px 0 96px">
+  <span class="eyebrow">Weekly delivery</span>
+  <h1>Subscription veg boxes</h1>
+  <p class="lede" style="max-width:56ch">A fresh box on your doorstep every week, no reordering. Pause or cancel any time on WhatsApp.</p>
+
+  <div class="subs-grid">
+    <div class="sub-card">
+      <h3>Box A — Budget Mix</h3>
+      <p class="price">₦6,000<span> / week</span></p>
+      <p>Seasonal vegetables for a household.</p>
+      <button class="btn btn--primary subscribe" data-box="A">Subscribe</button>
+    </div>
+    <div class="sub-card featured">
+      <span class="ribbon">Most popular</span>
+      <h3>Box B — Family Basket</h3>
+      <p class="price">₦10,000<span> / week</span></p>
+      <p>A larger selection for families.</p>
+      <button class="btn btn--primary subscribe" data-box="B">Subscribe</button>
+    </div>
+    <div class="sub-card">
+      <h3>Premium Greenhouse Box</h3>
+      <p class="price">₦15,000<span> / week</span></p>
+      <p>Greenhouse-only premium produce.</p>
+      <button class="btn btn--primary subscribe" data-box="P">Subscribe</button>
+    </div>
+  </div>
+  <div id="sub-result"></div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand"><img src="assets/logo.png" alt="Southwest Farms"><strong>Southwest Farms Limited</strong></div>
+      <p>Abeokuta, Nigeria</p>
+    </div>
+  </div>
+</footer>
+
+<div id="cart-modal" class="modal" aria-hidden="true">
+  <div class="modal-content">
+    <button id="close-cart" class="close" aria-label="Close cart">×</button>
+    <h3>Your Cart</h3>
+    <div id="cart-items"></div>
+    <div class="cart-footer"><strong>Total: ₦<span id="cart-total">0</span></strong><button id="checkout-btn" class="btn btn--primary">Checkout</button></div>
+  </div>
+</div>
+</body>
+</html>
