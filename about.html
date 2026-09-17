@@ -1,62 +1,142 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>About — Southwest Farms</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<script defer src="app.js"></script>
-</head>
-<body>
-<header class="site-header">
-  <div class="container">
-    <a href="index.html" class="brand"><img src="assets/logo.png" alt="Southwest Farms" class="logo"><span class="brand-name">Southwest Farms</span></a>
-    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Menu">☰</button>
-    <nav id="main-nav" class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="shop.html">Shop</a>
-      <a href="wholesale.html">Wholesale</a>
-      <a href="subscription.html">Subscriptions</a>
-      <a href="trace.html">Traceability</a>
-      <a href="contact.html">Contact</a>
-      <button id="cart-btn" class="cart-pill">Cart (<span id="cart-count">0</span>)</button>
-    </nav>
-  </div>
-</header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>About — Southwest Farms</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a href="index.html" class="brand">
+          <img
+            src="assets/SOUTHWEST LOGO.jpg"
+            alt="Southwest Farms"
+            class="logo"
+          />
+        </a>
 
-<main class="container" style="padding:48px 0 96px">
-  <span class="eyebrow">Our story</span>
-  <h1>Grown with care, tracked with precision</h1>
-  <p class="lede" style="max-width:60ch">Southwest Farms is an agribusiness based in Abeokuta, combining modern greenhouse technology with sustainable open-field farming to deliver fresh, nutritious vegetables to Nigerian homes and businesses.</p>
+        <nav id="main-nav" class="main-nav">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="wholesale.html">Wholesale</a>
+          <a href="subscription.html">Subscriptions</a>
+          <a href="trace.html">Traceability</a>
+          <a href="about.html" class="active">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
 
-  <h2 style="margin-top:48px">Our practices</h2>
-  <ul class="practice-list">
-    <li>Controlled-environment greenhouse production</li>
-    <li>Responsible water use</li>
-    <li>Post-harvest cold-chain handling</li>
-    <li>Traceability for every pack</li>
-  </ul>
-</main>
+        <div class="header-actions">
+          <button class="header-icon-btn" aria-label="Search">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+          </button>
+          <button id="cart-btn" class="header-icon-btn" aria-label="Cart">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <path d="M16 10a4 4 0 01-8 0" />
+            </svg>
+            <span id="cart-count" class="cart-badge" style="display: none"
+              >0</span
+            >
+          </button>
+          <!-- <a href="signup.html" class="btn-sign-in">Sign In</a> -->
+        </div>
 
-<footer class="site-footer">
-  <div class="container">
-    <div>
-      <div class="footer-brand"><img src="assets/logo.png" alt="Southwest Farms"><strong>Southwest Farms Limited</strong></div>
-      <p>Abeokuta, Nigeria</p>
+        <button
+          id="nav-toggle"
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+          aria-label="Menu"
+        >
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          >
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="container" style="padding: 48px 0 96px">
+      <span class="eyebrow">Our story</span>
+      <h1>Grown with care, tracked with precision</h1>
+      <p class="lede" style="max-width: 60ch">
+        Southwest Farms is an agribusiness based in Abeokuta, combining modern
+        greenhouse technology with sustainable open-field farming to deliver
+        fresh, nutritious vegetables to Nigerian homes and businesses.
+      </p>
+
+      <h2 style="margin-top: 48px">Our practices</h2>
+      <ul class="practice-list">
+        <li>Controlled-environment greenhouse production</li>
+        <li>Responsible water use</li>
+        <li>Post-harvest cold-chain handling</li>
+        <li>Traceability for every pack</li>
+      </ul>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div>
+          <div class="footer-brand">
+            <img src="assets/logo.png" alt="Southwest Farms" /><strong
+              >Southwest Farms Limited</strong
+            >
+          </div>
+          <p>Abeokuta, Nigeria</p>
+        </div>
+      </div>
+    </footer>
+
+    <div id="cart-modal" class="modal" aria-hidden="true">
+      <div class="modal-content">
+        <button id="close-cart" class="close" aria-label="Close cart">×</button>
+        <h3>Your Cart</h3>
+        <div id="cart-items"></div>
+        <div class="cart-footer">
+          <strong>Total: ₦<span id="cart-total">0</span></strong
+          ><button id="checkout-btn" class="btn btn--primary">Checkout</button>
+        </div>
+      </div>
     </div>
-  </div>
-</footer>
-
-<div id="cart-modal" class="modal" aria-hidden="true">
-  <div class="modal-content">
-    <button id="close-cart" class="close" aria-label="Close cart">×</button>
-    <h3>Your Cart</h3>
-    <div id="cart-items"></div>
-    <div class="cart-footer"><strong>Total: ₦<span id="cart-total">0</span></strong><button id="checkout-btn" class="btn btn--primary">Checkout</button></div>
-  </div>
-</div>
-</body>
+  </body>
 </html>
