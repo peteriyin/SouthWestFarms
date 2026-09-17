@@ -1,103 +1,240 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Southwest Farms — Fresh Vegetables from Abeokuta</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<script defer src="app.js"></script>
-</head>
-<body>
-<header class="site-header">
-  <div class="container">
-    <a href="index.html" class="brand"><img src="assets/logo.png" alt="Southwest Farms" class="logo"><span class="brand-name">Southwest Farms</span></a>
-    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Menu">☰</button>
-    <nav id="main-nav" class="main-nav">
-      <a href="index.html" class="active">Home</a>
-      <a href="shop.html">Shop</a>
-      <a href="wholesale.html">Wholesale</a>
-      <a href="subscription.html">Subscriptions</a>
-      <a href="trace.html">Traceability</a>
-      <a href="contact.html">Contact</a>
-      <button id="cart-btn" class="cart-pill">Cart (<span id="cart-count">0</span>)</button>
-    </nav>
-  </div>
-</header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Southwest Farms — Fresh Vegetables from Abeokuta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a href="index.html" class="brand">
+          <img
+            src="assets/SOUTHWEST LOGO.jpg"
+            alt="Southwest Farms"
+            class="logo"
+          />
+        </a>
 
-<main>
-  <section class="container hero">
-    <div class="hero-text">
-      <span class="eyebrow">Abeokuta, Ogun State</span>
-      <h1>Premium fresh vegetables, delivered within 24 hours</h1>
-      <p class="lede">Greenhouse and open-field produce, harvested and packed the same day. Every pack carries a lot code you can trace back to the field.</p>
-      <div class="hero-cta">
-        <a class="btn btn--primary" href="shop.html">Shop fresh produce</a>
-        <a class="btn btn--ghost" href="wholesale.html">Wholesale orders</a>
+        <nav id="main-nav" class="main-nav">
+          <a href="index.html" class="active">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="wholesale.html">Wholesale</a>
+          <a href="subscription.html">Subscriptions</a>
+          <a href="trace.html">Traceability</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="header-icon-btn" aria-label="Search">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+          </button>
+          <button id="cart-btn" class="header-icon-btn" aria-label="Cart">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <path d="M16 10a4 4 0 01-8 0" />
+            </svg>
+            <span id="cart-count" class="cart-badge" style="display: none"
+              >0</span
+            >
+          </button>
+          <!-- <a href="signup.html" class="btn-sign-in">Sign In</a> -->
+        </div>
+
+        <button
+          id="nav-toggle"
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+          aria-label="Menu"
+        >
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          >
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="container hero">
+        <div class="hero-text">
+          <span class="eyebrow">Abeokuta, Ogun State</span>
+          <h1>Premium fresh vegetables, delivered within 24 hours</h1>
+          <p class="lede">
+            Greenhouse and open-field produce, harvested and packed the same
+            day. Every pack carries a lot code you can trace back to the field.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn--primary" href="shop.html">Shop fresh produce</a>
+            <a class="btn btn--ghost" href="wholesale.html">Wholesale orders</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img
+            src="assets/hero.jpg"
+            alt="Greenhouse produce at Southwest Farms"
+          />
+          <span class="stamp"
+            ><span class="stamp-line">Cold-chain packed</span
+            ><span class="stamp-line stamp-lot">Farm to door in 24h</span></span
+          >
+        </div>
+      </section>
+
+      <section class="container categories">
+        <h2>Shop by category</h2>
+        <div class="cards">
+          <a class="card" href="shop.html#tomatoes"
+            ><div class="card-media">
+              <img src="assets/cherry_tomato.jpg" alt="Tomatoes" />
+            </div>
+            <h4>Tomatoes</h4></a
+          >
+          <a class="card" href="shop.html#peppers"
+            ><div class="card-media">
+              <img src="assets/bell_pepper.jpg" alt="Peppers" />
+            </div>
+            <h4>Peppers</h4></a
+          >
+          <a class="card" href="shop.html#corn"
+            ><div class="card-media">
+              <img src="assets/sweet_corn.jpg" alt="Sweet corn" />
+            </div>
+            <h4>Sweet Corn</h4></a
+          >
+          <a class="card" href="shop.html#watermelon"
+            ><div class="card-media">
+              <img src="assets/watermelon.jpg" alt="Watermelon" />
+            </div>
+            <h4>Watermelons</h4></a
+          >
+          <a class="card" href="shop.html#leafy"
+            ><div class="card-media">
+              <img src="assets/leafy.jpg" alt="Leafy greens" />
+            </div>
+            <h4>Leafy Greens</h4></a
+          >
+          <a class="card" href="subscription.html"
+            ><div class="card-media">
+              <img src="assets/veg_box.jpg" alt="Veg boxes" />
+            </div>
+            <h4>Veg Boxes</h4></a
+          >
+        </div>
+      </section>
+
+      <section class="container about">
+        <h2>About Southwest Farms</h2>
+        <p class="lede">
+          Located in Abeokuta, we operate modern greenhouses and open fields to
+          supply premium vegetables to households and businesses across Nigeria.
+          Quality, traceability, and fast delivery, in every pack.
+        </p>
+        <ul class="practice-list">
+          <li>Controlled-environment greenhouse production</li>
+          <li>Responsible water use</li>
+          <li>Post-harvest cold-chain handling</li>
+          <li>Traceability for every pack</li>
+        </ul>
+        <p style="margin-top: 24px">
+          <a href="about.html" class="btn btn--ghost">Our story</a>
+        </p>
+      </section>
+
+      <section class="container testimonials">
+        <h2>What our customers say</h2>
+        <div class="testimonial-cards">
+          <blockquote>
+            Fresh, consistent and great flavour. My go-to for tomatoes.<cite
+              >— Local Chef</cite
+            >
+          </blockquote>
+          <blockquote>
+            Fast delivery and great packaging — repeat customer!<cite
+              >— Home Cook</cite
+            >
+          </blockquote>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div>
+          <div class="footer-brand">
+            <img src="assets/logo.png" alt="Southwest Farms" /><strong
+              >Southwest Farms Limited</strong
+            >
+          </div>
+          <p>Abeokuta, Nigeria</p>
+          <p>
+            <a href="mailto:hello@southwestfarms.com.ng"
+              >hello@southwestfarms.com.ng</a
+            >
+            · +234 800 000 0000
+          </p>
+        </div>
+        <div>
+          <p>Follow us</p>
+          <div class="socials">
+            <a href="#">Instagram</a><a href="#">Facebook</a
+            ><a href="#">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="cart-modal" class="modal" aria-hidden="true">
+      <div class="modal-content">
+        <button id="close-cart" class="close" aria-label="Close cart">×</button>
+        <h3>Your Cart</h3>
+        <div id="cart-items"></div>
+        <div class="cart-footer">
+          <strong>Total: ₦<span id="cart-total">0</span></strong
+          ><button id="checkout-btn" class="btn btn--primary">Checkout</button>
+        </div>
       </div>
     </div>
-    <div class="hero-media">
-      <img src="assets/hero.jpg" alt="Greenhouse produce at Southwest Farms">
-      <span class="stamp"><span class="stamp-line">Cold-chain packed</span><span class="stamp-line stamp-lot">Farm to door in 24h</span></span>
-    </div>
-  </section>
-
-  <section class="container categories">
-    <h2>Shop by category</h2>
-    <div class="cards">
-      <a class="card" href="shop.html#tomatoes"><div class="card-media"><img src="assets/cherry_tomato.jpg" alt="Tomatoes"></div><h4>Tomatoes</h4></a>
-      <a class="card" href="shop.html#peppers"><div class="card-media"><img src="assets/bell_pepper.jpg" alt="Peppers"></div><h4>Peppers</h4></a>
-      <a class="card" href="shop.html#corn"><div class="card-media"><img src="assets/sweet_corn.jpg" alt="Sweet corn"></div><h4>Sweet Corn</h4></a>
-      <a class="card" href="shop.html#watermelon"><div class="card-media"><img src="assets/watermelon.jpg" alt="Watermelon"></div><h4>Watermelons</h4></a>
-      <a class="card" href="shop.html#leafy"><div class="card-media"><img src="assets/leafy.jpg" alt="Leafy greens"></div><h4>Leafy Greens</h4></a>
-      <a class="card" href="subscription.html"><div class="card-media"><img src="assets/veg_box.jpg" alt="Veg boxes"></div><h4>Veg Boxes</h4></a>
-    </div>
-  </section>
-
-  <section class="container about">
-    <h2>About Southwest Farms</h2>
-    <p class="lede">Located in Abeokuta, we operate modern greenhouses and open fields to supply premium vegetables to households and businesses across Nigeria. Quality, traceability, and fast delivery, in every pack.</p>
-    <ul class="practice-list">
-      <li>Controlled-environment greenhouse production</li>
-      <li>Responsible water use</li>
-      <li>Post-harvest cold-chain handling</li>
-      <li>Traceability for every pack</li>
-    </ul>
-    <p style="margin-top:24px"><a href="about.html" class="btn btn--ghost">Our story</a></p>
-  </section>
-
-  <section class="container testimonials">
-    <h2>What our customers say</h2>
-    <div class="testimonial-cards">
-      <blockquote>Fresh, consistent and great flavour. My go-to for tomatoes.<cite>— Local Chef</cite></blockquote>
-      <blockquote>Fast delivery and great packaging — repeat customer!<cite>— Home Cook</cite></blockquote>
-    </div>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <div>
-      <div class="footer-brand"><img src="assets/logo.png" alt="Southwest Farms"><strong>Southwest Farms Limited</strong></div>
-      <p>Abeokuta, Nigeria</p>
-      <p><a href="mailto:hello@southwestfarms.com.ng">hello@southwestfarms.com.ng</a> · +234 800 000 0000</p>
-    </div>
-    <div>
-      <p>Follow us</p>
-      <div class="socials"><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">WhatsApp</a></div>
-    </div>
-  </div>
-</footer>
-
-<div id="cart-modal" class="modal" aria-hidden="true">
-  <div class="modal-content">
-    <button id="close-cart" class="close" aria-label="Close cart">×</button>
-    <h3>Your Cart</h3>
-    <div id="cart-items"></div>
-    <div class="cart-footer"><strong>Total: ₦<span id="cart-total">0</span></strong><button id="checkout-btn" class="btn btn--primary">Checkout</button></div>
-  </div>
-</div>
-</body>
+  </body>
 </html>
