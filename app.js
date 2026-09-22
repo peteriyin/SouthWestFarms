@@ -74,23 +74,23 @@ document.addEventListener('DOMContentLoaded', () => {
     function render(list) {
       container.innerHTML = '';
       if (list.length === 0) {
-        container.innerHTML = '<p>No produce matches that search right now.</p>';
+        container.innerHTML = '<p class="py-8 text-[#4b4433]">No produce matches that search right now.</p>';
         return;
       }
       list.forEach(p => {
         const el = document.createElement('div');
-        el.className = 'product';
+        el.className = 'flex flex-col overflow-hidden rounded-[14px] border border-[#201b1224] bg-[#fffdf8] transition duration-150 hover:-translate-y-1 hover:shadow-[0_14px_32px_-14px_rgba(20,30,20,0.35)]';
         el.innerHTML = `
-          <div class="product-media">
-            <img src="${p.image}" alt="${p.title}">
-            <span class="stamp"><span class="stamp-line">${sourceLabel(p.source)}</span><span class="stamp-line stamp-lot">${p.lot}</span></span>
+          <div class="relative aspect-[1/0.82] overflow-hidden">
+            <img class="size-full object-cover" src="${p.image}" alt="${p.title}">
+            <span class="absolute bottom-2.5 left-2.5 rounded-md border-2 border-dashed border-[#1f5c38] bg-[#fffdf8] px-2.5 py-1.5 font-mono text-[0.58rem] uppercase tracking-[0.06em] text-[#123d26] shadow-[0_14px_32px_-14px_rgba(20,30,20,0.35)]"><span class="block">${sourceLabel(p.source)}</span><span class="mt-0.5 block text-[0.7rem] font-semibold">${p.lot}</span></span>
           </div>
-          <div class="product-body">
-            <h4>${p.title}</h4>
-            <p class="price">₦${p.price.toLocaleString()}</p>
-            <div class="product-actions">
-              <button class="btn btn--primary btn--sm add" data-id="${p.id}">Add to cart</button>
-              <a class="btn btn--ghost btn--sm" href="trace.html?lot=${p.lot}">Trace batch</a>
+          <div class="flex flex-1 flex-col gap-1.5 p-4">
+            <h4 class="font-display text-base font-bold leading-tight text-[#201b12]">${p.title}</h4>
+            <p class="m-0 font-mono text-lg font-semibold text-[#123d26]">₦${p.price.toLocaleString()}</p>
+            <div class="mt-auto flex gap-2 pt-3">
+              <button class="add inline-flex items-center justify-center rounded-full bg-[#1f5c38] px-3.5 py-2 text-[0.82rem] font-semibold text-[#fffdf8] transition hover:bg-[#123d26] focus:outline-none focus:ring-2 focus:ring-[#e1a22e] focus:ring-offset-2" data-id="${p.id}">Add to cart</button>
+              <a class="inline-flex items-center justify-center rounded-full border border-[#201b1224] px-3.5 py-2 text-[0.82rem] font-semibold text-[#201b12] transition hover:border-[#1f5c38] hover:text-[#123d26] focus:outline-none focus:ring-2 focus:ring-[#e1a22e] focus:ring-offset-2" href="trace.html?lot=${p.lot}">Trace batch</a>
             </div>
           </div>`;
         container.appendChild(el);
@@ -250,7 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (params.has('lot')) {
       document.getElementById('lot-input').value = params.get('lot');
       lookup.click();
-    } 310
+    }
   }
 
   updateCartCount();
