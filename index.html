@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,7 +28,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="src/output.css" />
     <script defer src="app.js"></script>
   </head>
   <body>
@@ -65,26 +65,25 @@
         </a>
 
         <nav id="main-nav" class="main-nav">
-          <a href="index.html" class="active">Home</a>
-          <a href="shop.html" class="hvr-underline-from-left">Shop</a>
-          <a href="wholesale.html" class="hvr-underline-from-left">Wholesale</a>
-          <a href="subscription.html" class="hvr-underline-from-left"
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="shop.html" class="nav-link nav-link-hover">Shop</a>
+          <a href="wholesale.html" class="nav-link nav-link-hover">Wholesale</a>
+          <a href="subscription.html" class="nav-link nav-link-hover"
             >Subscriptions</a
           >
-          <a href="trace.html" class="hvr-underline-from-left">Traceability</a>
-          <a href="about.html" class="hvr-underline-from-left">About</a>
-          <a href="contact.html" class="hvr-underline-from-left">Contact</a>
+          <a href="trace.html" class="nav-link nav-link-hover">Traceability</a>
+          <a href="about.html" class="nav-link nav-link-hover">About</a>
+          <a href="contact.html" class="nav-link nav-link-hover">Contact</a>
         </nav>
 
         <div class="header-actions">
-          <button class="header-icon-btn" aria-label="Search">
+          <button class="group header-icon-btn" aria-label="Search">
             <svg
               width="20"
               height="20"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
             >
@@ -92,14 +91,13 @@
               <line x1="21" y1="21" x2="16.65" y2="16.65" />
             </svg>
           </button>
-          <button id="cart-btn" class="header-icon-btn" aria-label="Cart">
+          <button id="cart-btn" class="group header-icon-btn" aria-label="Cart">
             <svg
               width="20"
               height="20"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
             >
@@ -138,76 +136,80 @@
     </header>
 
     <main>
-      <section class="container hero">
-        <div class="hero-text">
+      <section
+        class="container grid grid-cols-1 items-center gap-16 py-12 split:grid-cols-[1.05fr_0.95fr] split:pt-24 split:pb-16"
+      >
+        <div>
           <span class="eyebrow">Abeokuta, Ogun State</span>
           <h1>Premium fresh vegetables, delivered within 24 hours</h1>
-          <p class="lede">
+          <p class="max-w-[46ch] text-[1.08rem] text-ink-soft">
             Greenhouse and open-field produce, harvested and packed the same
             day. Every pack carries a lot code you can trace back to the field.
           </p>
-          <div class="hero-cta">
+          <div class="mt-6 flex flex-wrap gap-3">
             <a class="btn btn--primary" href="shop.html">Shop fresh produce</a>
             <a class="btn btn--ghost" href="wholesale.html">Wholesale orders</a>
           </div>
         </div>
-        <div class="hero-media">
+        <div class="hero-media max-split:order-first">
           <img
             src="assets/hero.jpg"
             alt="Greenhouse produce at Southwest Farms"
           />
-          <span class="stamp"
-            ><span class="stamp-line">Cold-chain packed</span
-            ><span class="stamp-line stamp-lot">Farm to door in 24h</span></span
-          >
+          <span class="stamp">
+            <span class="stamp-line">Cold-chain packed</span>
+            <span class="stamp-line stamp-lot">Farm to door in 24h</span>
+          </span>
         </div>
       </section>
 
-      <section class="container categories">
+      <section class="container py-16">
         <h2>Shop by category</h2>
-        <div class="cards">
-          <a class="card" href="shop.html#tomatoes"
-            ><div class="card-media">
+        <div
+          class="mt-6 grid grid-cols-[repeat(auto-fit,minmax(170px,1fr))] gap-4"
+        >
+          <a class="card" href="shop.html#tomatoes">
+            <div class="card-media">
               <img src="assets/cherry_tomato.jpg" alt="Tomatoes" />
             </div>
-            <h4>Tomatoes</h4></a
-          >
-          <a class="card" href="shop.html#peppers"
-            ><div class="card-media">
+            <h4 class="m-0 px-3 pt-3 pb-4 text-base">Tomatoes</h4>
+          </a>
+          <a class="card" href="shop.html#peppers">
+            <div class="card-media">
               <img src="assets/bell_pepper.jpg" alt="Peppers" />
             </div>
-            <h4>Peppers</h4></a
-          >
-          <a class="card" href="shop.html#corn"
-            ><div class="card-media">
+            <h4 class="m-0 px-3 pt-3 pb-4 text-base">Peppers</h4>
+          </a>
+          <a class="card" href="shop.html#corn">
+            <div class="card-media">
               <img src="assets/sweet_corn.jpg" alt="Sweet corn" />
             </div>
-            <h4>Sweet Corn</h4></a
-          >
-          <a class="card" href="shop.html#watermelon"
-            ><div class="card-media">
+            <h4 class="m-0 px-3 pt-3 pb-4 text-base">Sweet Corn</h4>
+          </a>
+          <a class="card" href="shop.html#watermelon">
+            <div class="card-media">
               <img src="assets/watermelon.jpg" alt="Watermelon" />
             </div>
-            <h4>Watermelons</h4></a
-          >
-          <a class="card" href="shop.html#leafy"
-            ><div class="card-media">
+            <h4 class="m-0 px-3 pt-3 pb-4 text-base">Watermelons</h4>
+          </a>
+          <a class="card" href="shop.html#leafy">
+            <div class="card-media">
               <img src="assets/leafy.jpg" alt="Leafy greens" />
             </div>
-            <h4>Leafy Greens</h4></a
-          >
-          <a class="card" href="subscription.html"
-            ><div class="card-media">
+            <h4 class="m-0 px-3 pt-3 pb-4 text-base">Leafy Greens</h4>
+          </a>
+          <a class="card" href="subscription.html">
+            <div class="card-media">
               <img src="assets/veg_box.jpg" alt="Veg boxes" />
             </div>
-            <h4>Veg Boxes</h4></a
-          >
+            <h4 class="m-0 px-3 pt-3 pb-4 text-base">Veg Boxes</h4>
+          </a>
         </div>
       </section>
 
-      <section class="container about">
+      <section class="container">
         <h2>About Southwest Farms</h2>
-        <p class="lede">
+        <p>
           Located in Abeokuta, we operate modern greenhouses and open fields to
           supply premium vegetables to households and businesses across Nigeria.
           Quality, traceability, and fast delivery, in every pack.
@@ -218,14 +220,16 @@
           <li>Post-harvest cold-chain handling</li>
           <li>Traceability for every pack</li>
         </ul>
-        <p style="margin-top: 24px">
+        <p class="mt-6">
           <a href="about.html" class="btn btn--ghost">Our story</a>
         </p>
       </section>
 
-      <section class="container testimonials">
+      <section class="container py-16">
         <h2>What our customers say</h2>
-        <div class="testimonial-cards">
+        <div
+          class="mt-6 grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-4"
+        >
           <blockquote>
             Fresh, consistent and great flavour. My go-to for tomatoes.<cite
               >— Local Chef</cite
@@ -272,8 +276,8 @@
         <h3>Your Cart</h3>
         <div id="cart-items"></div>
         <div class="cart-footer">
-          <strong>Total: ₦<span id="cart-total">0</span></strong
-          ><button id="checkout-btn" class="btn btn--primary">Checkout</button>
+          <strong>Total: ₦<span id="cart-total">0</span></strong>
+          <button id="checkout-btn" class="btn btn--primary">Checkout</button>
         </div>
       </div>
     </div>
